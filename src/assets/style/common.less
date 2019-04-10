@@ -1,0 +1,142 @@
+// 更换iview主题色(需要less2.5.0左右版本才能导入)
+@import '~iview/src/styles/index.less';
+
+@primary-color: #2d8cf0;
+
+.ivu-table th{
+    background-color: #d5e8fc;
+    font-size: 16px;
+    color: #343436;
+    font-weight: bold;
+}
+
+.ivu-table th, .ivu-table td {
+    min-width: 0px;
+    height: 52px;
+    box-sizing: border-box;
+    // text-align: left;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(232, 234, 236);
+}
+
+.ivu-menu-vertical.ivu-menu-light:after{
+    background: none;
+}
+.ivu-form-item-label{
+    min-width: 70px;
+}
+
+.ivu-form-item-content{
+    float:right;
+}
+
+#login .ivu-form-item-content{
+    float:none!important;
+  }
+  //个人设置弹框，tab样式
+ .userModal{
+    .ivu-form-item-label:before {
+        content: "*"!important;
+        display: inline-block!important;
+        margin-right: 4px!important;
+        line-height: 1!important;
+        font-family: SimSun!important;
+        font-size: 12px!important;
+        color: #ed4014!important;
+    }
+    .ivu-form-item-label1{
+        .ivu-form-item-label:before{
+            content: ""!important;
+            display: table!important;
+        }
+    }
+    .ivu-modal{
+        width: 430px!important;
+    }
+    .ivu-input-large,.ivu-select-large{
+        width: 240px;
+    }
+    .ivu-modal-header {
+        border-bottom: none;
+    }
+    .ivu-modal-body{
+        padding: 0;
+    }
+    .ivu-tabs-ink-bar{
+        height: 32px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .ivu-tabs-nav{
+      margin-left: 16px;
+    }
+    .ivu-tabs-nav .ivu-tabs-tab-active{
+        color: #fff!important;
+        z-index: 999;
+    }
+    .ivu-tabs .ivu-tabs-tabpane{
+        padding: 16px;
+    }
+    .ivu-form-item-content{
+        float:none!important;
+    }
+ }
+ //弹框红点和宽度，去掉红点需要加ivu-form-item-label1
+.allModle{
+    .ivu-form-item-label:before {
+        content: "*"!important;
+        display: inline-block!important;
+        margin-right: 4px!important;
+        line-height: 1!important;
+        font-family: SimSun!important;
+        font-size: 12px!important;
+        color: #ed4014!important;
+    }
+    .ivu-form-item-label1{
+        .ivu-form-item-label:before{
+            content: ""!important;
+            display: table!important;
+        }
+    }
+    .ivu-form-item-label{
+        width: 85px!important;
+    }
+    .ivu-form-item-content{
+        float:none!important;
+    }
+    .ivu-input-wrapper,.ivu-select{
+        width:240px; 
+    }
+}
+
+//模态框上下居中
+ .centerModal{
+    display: flex;
+     align-items: center;
+     justify-content: center;
+
+     .ivu-modal{
+         top: 0;
+     }
+}
+
+//打印机详情
+.printerDetailTable .ivu-table-tbody{
+    span{
+       height: 16px;
+       width: 16px;
+       border-radius:50%; 
+       display: inline-block;
+       margin-left: 0px;
+       &.online{
+           background: #a9d86e;
+       }
+       &.error{
+           background: #e65555;
+       }
+       &.offline{
+           background: #d9d9d9;
+       }
+   } 
+}
